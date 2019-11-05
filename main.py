@@ -10,8 +10,6 @@ matrice = np.random.randint(1,5,size=(5,6))
 ROWS=5
 COLS=6
 size = 40
-can_width = 800
-can_height = 600
 can_width = size * ROWS
 can_height = size * COLS
 print("")
