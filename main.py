@@ -4,7 +4,7 @@ from tkinter import *
 
 class Matrice:
 
-    #Ma classe matrice classe matrice
+    #Ma classe matrice
     def __init__(self):
         self.nom = "Matrice"
         self._colones = 6
@@ -48,15 +48,16 @@ class Matrice:
         self._values  =  v  
 
 ma_matrice = Matrice()
-print(ma_matrice.nom, ma_matrice.colones, ma_matrice.lignes)
-print(ma_matrice.values)
 
-#Taille d'un célulle de la matrice graphiquement
+#print(ma_matrice.nom, ma_matrice.colones, ma_matrice.lignes)
+#print(ma_matrice.values)
+
+#Taille d'une célulle de la matrice.
 size = 40
 can_width = size * ma_matrice.lignes
 can_height = size * ma_matrice.colones
 
-#Mémo des commande usefull en matrice.
+#Mémo des commandes usefull.
 # print(ma_matrice.values)
 # print(np.size(ma_matrice.values))
 # print(np.shape(ma_matrice.values))
@@ -66,24 +67,24 @@ can_height = size * ma_matrice.colones
 
 couleurs = {5: "white", 1: "blue", 2: "red", 3: "green", 4: "black"}
 
-#Ma fenetre tkinter
+# Ma fenetre tkinter
 window = tk.Tk()
 
-# Création d'un widget Label (texte 'Bonjour tout le monde !')
+# Création d'un widget Label.
 Label1 = Label(window, text = 'Matrice :', fg = 'red')
 # Positionnement du widget avec la méthode pack()
 Label1.pack()
 
 
-#Création d'un canvas afin de mettre des rectangles dedans.
+# Création d'un canvas afin de mettre des rectangles(carré du coup) dedans.
 canvas = Canvas(window, width=can_width, height=can_height)
 canvas.pack()
 
-#Création d'un boucle pour générer le tableau de carrés et fill en fonction de la valeur matricielle associée.
-#Itération sur r qui représente les lignes et i qui représente les colones.
+# Création d'une boucle pour générer le tableau de carrés et fill en fonction de la valeur matricielle associée.
+# Itération sur r qui représente les lignes et i qui représente les colones.
 for r in range(ma_matrice.lignes):
-    #rsize augmente à chaque itération afin de décaler chaque nouveau block)
-    #On retrouve le même type d'itération pour les colones avec le isize ci-dessous
+    # rsize augmente à chaque itération afin de décaler chaque nouveau block)
+    # On retrouve le même type d'itération pour les colones avec le isize ci-dessous
     rsize=(r*size)
     for i in range(ma_matrice.colones):
         isize=(i*size)
